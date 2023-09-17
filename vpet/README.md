@@ -1,34 +1,20 @@
-# VPet AI Butler
 
-This project is a virtual pet AI butler that can control the command line. It includes a SwiftUI application with voice recognition and text-to-speech capabilities, and a pet entity that can execute actions based on voice commands and simulate system-level commands.
+# Merged Project: Pet-Therapy and Open-Interpreter
 
-# Installation
+This project aims to integrate the Pet-Therapy virtual pet functionality with the Open-Interpreter conversational backend.
 
-To install this project, clone the repository and install the required dependencies using pip:
+## Installation
 
-```
-git clone https://github.com/yourusername/yourrepository.git
-cd yourrepository
-pip install -r requirements.txt
-```
+- For Pet-Therapy: Open the `Sources` folder in Xcode and run the project.
+- For Open-Interpreter: Run `poetry install` in the `interpreter` folder.
 
-# Usage
+## Integration Steps
 
-To use this project, run the `main.swift` script to start the SwiftUI application and the `main.py` script to start the server:
+1. Initialize Open-Interpreter in `main.swift` of Pet-Therapy.
+2. Replace pet behaviors in `PetEntity.swift` based on Open-Interpreter's output.
+3. Handle voice I/O around Open-Interpreter.
 
-```
-swift run
-python main.py
-```
+## Additional Features
 
-# Contributing
-
-If you would like to contribute to this project, please fork the repository, make your changes, and submit a pull request. We value all contributions and will review them in a timely manner.
-
-# Credits
-
-This project was created by [Your Name]. We would like to thank all contributors and users for their support.
-
-# License
-
-This project is licensed under the MIT License. This means you are free to use, modify, and distribute the project, as long as you include the original copyright and license notice in any copy of the software.
+- Voice assistant capabilities
+- Mouse control using macOS APIs

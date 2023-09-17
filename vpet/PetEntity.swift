@@ -1,13 +1,24 @@
 import Foundation
+import SwiftUI
 
 struct PetEntity {
-    func executeActionBasedOnResponse(response: String) {
-        // Implementation of executing actions based on response
-        print("Executing action based on response: \(response)")
+    func executeActionBasedOnResponse(response: Response) {
+        do {
+    // Implementation of executing actions based on response will go here
+} catch {
+    print("Error executing action: \(error)")
+}
     }
 
-    func simulateSystemLevelCommand(response: String) {
-        // Implementation of simulating system-level command
-        print("Simulating system-level command: \(response)")
+    func simulateSystemLevelCommand(response: Response) {
+        do {
+    if response.commandType == .mouse {
+    let point = CGPoint(x: response.commandDetails.x, y: response.commandDetails.y)
+    let mouseDown = CGEvent(mouseEventSource: nil, mouseType: .leftMouseDown, mouseCursorPosition: point, mouseButton: .left)
+    mouseDown?.post(tap: .cghidEventTap)
+}
+} catch {
+    print("Error simulating system-level command: \(error)")
+}
     }
 }

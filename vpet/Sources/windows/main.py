@@ -64,7 +64,6 @@ def launch_app(config_path, assets_path, species_path):
     _load_dependencies(app, config_storage, assets_path, species_path)
 
     app_window = AppWindow()
-    app_window.show()
 
     on_screen_coordinator = Dependencies.instance(OnScreenCoordinator)
     on_screen_coordinator.show()

@@ -90,11 +90,11 @@ Press `CTRL-C` to exit.
 
 class Interpreter:
 
-  def __init__(self):
-    self.messages = []
+  def __init__(self, messages = [], auto_run=False):
+    self.messages = messages
     self.temperature = 0.001
     self.api_key = None
-    self.auto_run = False
+    self.auto_run = auto_run
     self.local = False
     self.model = "gpt-4"
     self.debug_mode = False
@@ -339,7 +339,7 @@ class Interpreter:
 
           # Switch to GPT-4
           self.local = False
-          self.model = "gpt-4"
+          self.model = "gpt-3.5-turbo"
           self.verify_api_key()
 
     # Display welcome message
